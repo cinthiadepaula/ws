@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const servico = new Schema({
-id: {
-    type: String,
+salaoId: {
+    
+    type: mongoose.Types.ObjectId,
+    ref:'Salao',
     required: [true, "Nome é obrigatório"]
 },
 foto: String,
